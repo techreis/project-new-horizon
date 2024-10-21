@@ -21,7 +21,7 @@
   <img src="TechReisLogo.webp" alt="TechReis Company Logo" />
   <ul class="hidden md:flex gap-[2.5rem] pr-[1.5625rem]">
     {#each navItems as item}
-      <li><a href={item.href} class="hover:underline">{item.label}</a></li>
+      <li><a href={item.href}>{item.label}</a></li>
     {/each}
   </ul>
   <button 
