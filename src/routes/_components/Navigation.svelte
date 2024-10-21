@@ -1,10 +1,62 @@
-<nav class="fixed w-full flex items-center justify-between p-5">
+<script lang="ts">
+  import { Menu, X } from "lucide-svelte/icons";
+  import { slide } from 'svelte/transition';
+  
+  let isMenuOpen = false;
+  
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/Company", label: "Tech Reis" },
+    { href: "/Team", label: "Our Team" },
+    { href: "/Blog", label: "Blog" },
+    { href: "/Contact", label: "Let's Talk" }
+  ];
+  
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+  }
+</script>
+
+<nav class="fixed w-full flex items-center justify-between p-5 bg-white shadow-md">
   <img src="TechReisLogo.webp" alt="TechReis Company Logo" />
-  <ul class="flex gap-[2.5rem] pr-[1.5625rem]">
-    <li><a href="/">Home</a></li>
-    <li><a href="/Company">Tech Reis</a></li>
-    <li><a href="/Team">Our Team</a></li>
-    <li><a href="/Blog">Blog</a></li>
-    <li><a href="/Contact">Let's Talk</a></li>
+  <ul class="hidden md:flex gap-[2.5rem] pr-[1.5625rem]">
+    {#each navItems as item}
+      <li><a href={item.href} class="hover:underline">{item.label}</a></li>
+    {/each}
   </ul>
+  <button 
+    on:click={toggleMenu}
+    class="md:hidden p-2"
+    aria-expanded={isMenuOpen}
+    aria-controls="mobile-menu"
+    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+  >
+    {#if isMenuOpen}
+      <X />
+    {:else}
+      <Menu />
+    {/if}
+  </button>
 </nav>
+
+{#if isMenuOpen}
+  <div 
+    id="mobile-menu"
+    class="fixed top-[5rem] left-0 w-full bg-white shadow-md md:hidden"
+    transition:slide
+  >
+    <ul class="flex flex-col p-5">
+      {#each navItems as item}
+        <li class="py-2">
+          <a 
+            href={item.href} 
+            class="block w-full hover:bg-gray-100 p-2 rounded"
+            on:click={() => isMenuOpen = false}
+          >
+            {item.label}
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </div>
+{/if}
