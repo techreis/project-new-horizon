@@ -14,9 +14,10 @@
         <img
           src="japan.webp"
           alt="Stylised dot graphic of map of Japan"
-          class="absolute h-[25rem] xl:h-[43.75rem] w-[25rem] xl:w-[43.75rem] -top-[180px] xl:-top-[350px] right-[150px] xl:-right-[50px] drop-shadow-[0_4px_66.6px_rgba(0,209,255,1.0)]"  
+          class="absolute h-[43.75rem] w-[43.75rem] -top-[350px] -right-[50px] tech-glow"  
         />
       </p>
+      
     </div>
   </div>
 </section>
