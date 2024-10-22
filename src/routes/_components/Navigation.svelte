@@ -2,7 +2,7 @@
   import { Menu, X } from "lucide-svelte/icons";
   import { slide } from 'svelte/transition';
   
-  let isMenuOpen = false;
+  let isMenuOpen = $state(false);
   
   const navItems = [
     { href: "/", label: "Home" },
@@ -12,7 +12,7 @@
     { href: "/Contact", label: "Let's Talk" }
   ];
   
-  function toggleMenu() {
+  const toggleMenu = () => {
     isMenuOpen = !isMenuOpen;
   }
 </script>
@@ -25,7 +25,7 @@
     {/each}
   </ul>
   <button 
-    on:click={toggleMenu}
+    onclick={toggleMenu}
     class="md:hidden p-2"
     aria-expanded={isMenuOpen}
     aria-controls="mobile-menu"
@@ -42,7 +42,7 @@
 {#if isMenuOpen}
   <div 
     id="mobile-menu"
-    class="fixed top-[5rem] left-0 w-full bg-white shadow-md md:hidden"
+    class="fixed top-[6.25rem] left-0 w-full bg-white shadow-md md:hidden"
     transition:slide
   >
     <ul class="flex flex-col p-5">
@@ -51,7 +51,7 @@
           <a 
             href={item.href} 
             class="block w-full hover:bg-gray-100 p-2 rounded"
-            on:click={() => isMenuOpen = false}
+            onclick={() => isMenuOpen = false}
           >
             {item.label}
           </a>
