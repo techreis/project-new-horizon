@@ -1,3 +1,5 @@
-<video class="z-0" autoplay muted>
-  <source src="TechReisPRVideo.mp4" type="video/mp4" />
-</video>
+<script lang="ts">
+	import Hero from "./_components/Hero.svelte";
+</script>
+
+<Hero />
