@@ -69,11 +69,11 @@
   }
 
   h2 {
-    @apply text-[2.5rem] lg:text-[3.5rem] font-bold !leading-[120%];
+    @apply text-[2.5rem] lg:text-[3.5rem] font-bold !leading-[120%] text-primary;
   }
 
   h3 {
-    @apply text-[1.75rem] lg:text-[2rem] font-normal !leading-[120%];
+    @apply text-[1.75rem] lg:text-[2rem] font-normal !leading-[120%] text-primary;
   }
 
   h4 {
