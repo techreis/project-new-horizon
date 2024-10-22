@@ -1,5 +1,9 @@
+<script lang="ts">
+	import Button from "$lib/components/ui/button/button.svelte";
+</script>
+
 <section class="grid max-h-[958px]">
-  <video class="w-full col-start-1 row-start-1 object-cover" autoplay loop muted>
+  <video class="w-full max-h-[958px] -z-10 col-start-1 row-start-1 object-cover" autoplay loop muted>
     <source src="TechReisPRVideo.mp4" type="video/mp4" />
   </video>
   <div class="col-start-1 row-start-1 bg-black/60">
@@ -14,10 +18,13 @@
         <img
           src="japan.webp"
           alt="Stylised dot graphic of map of Japan"
-          class="absolute h-[43.75rem] w-[43.75rem] -top-[350px] -right-[50px] tech-glow"  
+          class="absolute h-[43.75rem] w-[43.75rem] -top-[350px] -right-[50px] tech-glow-strong"  
         />
       </p>
-      
+      <div class="flex gap-[25px]">
+        <Button variant="secondary">Meet Our Team</Button>
+        <Button variant="secondary">Our Projects</Button>
+      </div>
     </div>
   </div>
 </section>
