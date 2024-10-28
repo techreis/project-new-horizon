@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Earth, Rocket, Sprout, Users } from 'lucide-svelte';
+	import { Earth, Quote, Rocket, Sprout, Users } from 'lucide-svelte';
 	import ComparisonCard from './_components/ComparisonCard.svelte';
 	import CultureCard from './_components/CultureCard.svelte';
 	import Hero from './_components/Hero.svelte';
@@ -107,23 +107,28 @@
 		</section>
 	</div>
 
-	<!-- Testimonials -->
-	<section class="mb-20">
-		<h2 class="mb-12 text-center text-4xl font-bold">Testimonials</h2>
-		<div class="mx-auto max-w-3xl">
-			<blockquote class="rounded-lg bg-white p-8 shadow-lg">
-				<p class="mb-4 italic text-gray-600">
-					"Our team specializes in full-stack development and project management, delivering modern
-					solutions with precision and innovation."
+	<!-- Testimonials, Customers, Achievements -->
+	<section class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] py-[100px]">
+		<h2 class="text-center">Testimonials</h2>
+		<div class="mx-auto flex max-w-3xl gap-x-[25px] rounded-lg bg-white p-[25px] shadow-lg">
+			<Quote class="h-[24px] w-[24px]" />
+			<blockquote class="flex flex-1 flex-col gap-y-[10px]">
+				<p class="italic">
+					“Specialising in a complete suite of full-stack development, UX/UI, and project
+					management, our mission is to blend the long-respected principles of Japanese service and
+					engineering precision into modern, cutting-edge technology solutions for the 21st
+					century.”
 				</p>
-				<footer class="font-semibold">- Technical Director</footer>
+				<p class="text-base">
+					<span>Yuta Shimogishi</span>
+					<br />
+					<span class="text-gray-600">CEO - Tech Reis</span>
+				</p>
 			</blockquote>
 		</div>
-	</section>
 
-	<!-- Customers -->
-	<section class="mb-20">
-		<h2 class="mb-12 text-center text-4xl font-bold">Customers</h2>
+		<!-- Customers -->
+		<h2 class="text-center">Customers</h2>
 		<div
 			class="grid grid-cols-2 items-center justify-items-center gap-8 md:grid-cols-3 lg:grid-cols-6"
 		>
@@ -134,10 +139,8 @@
 			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 5</div>
 			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 6</div>
 		</div>
-	</section>
 
-	<!-- Achievements -->
-	<section class="mb-20">
+		<!-- Achievements -->
 		<h2 class="mb-12 text-center text-4xl font-bold">Achievements</h2>
 		<div class="flex justify-center gap-8">
 			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 1</div>
