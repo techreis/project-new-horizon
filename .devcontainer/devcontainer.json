@@ -1,0 +1,31 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"name": "Node.js (latest LTS)",
+	"remoteUser": "root", // これを設定しないでnodeユーザー等で環境構築すると.ssh/以下がマウントされない
+	"dockerFile": "Dockerfile",
+	"runArgs": [
+		"-v",
+		"${env:HOME}${env:USERPROFILE}/.aws:/root/.aws",
+		"-v",
+		"${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh:ro"
+	],
+	// Uncomment the next line if you want to publish any ports.
+	"appPort": [8080],
+	// Uncomment the next line if you want to add in default container specific settings.json values
+	// "settings":  { "workbench.colorTheme": "Quiet Light" },
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss",
+				"eamodio.gitlens",
+				"tomoki1207.vscode-input-sequence",
+				"oderwat.indent-rainbow",
+				"svelte.svelte-vscode"
+			]
+		}
+	}
+}
