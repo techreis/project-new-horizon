@@ -141,7 +141,7 @@
 		</div>
 
 		<!-- Achievements -->
-		<h2 class="mb-12 text-center text-4xl font-bold">Achievements</h2>
+		<h2 class="text-center">Achievements</h2>
 		<div class="flex justify-center gap-8">
 			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 1</div>
 			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 2</div>
