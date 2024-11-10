@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { superForm } from 'sveltekit-superforms/client';
+	import type { PageData } from './$types';
 	import { contactSchema } from './schema';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 	let hasConsented = $state(false);
 
 	const { form, errors, enhance } = superForm(data.form, {

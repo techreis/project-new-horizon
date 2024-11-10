@@ -6,10 +6,10 @@
 
 	const navItems = [
 		{ href: '/', label: 'Home' },
-		{ href: '/Company', label: 'Tech Reis' },
-		{ href: '/Team', label: 'Our Team' },
-		{ href: '/Blog', label: 'Blog' },
-		{ href: '/Contact', label: "Let's Talk" }
+		{ href: '/company', label: 'Tech Reis' },
+		{ href: '/team', label: 'Our Team' },
+		{ href: '#', label: 'Blog' },
+		{ href: '/contact', label: "Let's Talk" }
 	];
 
 	const toggleMenu = () => {

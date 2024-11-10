@@ -10,14 +10,14 @@
 	};
 
 	function handleClick() {
-		goto(`/Team/${member.slug}`);
+		goto(`/team/${member.slug}`);
 	}
 </script>
 
 <div
 	class="flex flex-col gap-[10px] rounded-[12px] p-[25px] shadow-xl hover:cursor-pointer hover:bg-primary"
-	on:click={handleClick}
-	on:keydown={(e) => e.key === 'Enter' && handleClick()}
+	onclick={handleClick}
+	onkeydown={(e) => e.key === 'Enter' && handleClick()}
 	role="button"
 	tabindex="0"
 >
