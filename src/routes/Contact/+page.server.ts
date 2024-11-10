@@ -27,6 +27,14 @@ export const actions = {
 
 		try {
 			console.log('Sanitized data:', sanitizedData); // Debug log
+			fetch('https://dev.global.techreis.co.jp/dev/global/contacts', {
+				method: 'POST',
+				body: JSON.stringify(sanitizedData),
+				headers: {
+					'Content-Type': 'application/json',
+					'Access-Control-Allow-Origin': '*'
+				}
+			});
 
 			return {
 				form,
