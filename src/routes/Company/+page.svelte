@@ -1,3 +1,7 @@
+<script lang="ts">
+	import Footer from '$lib/components/ui/Footer/Footer.svelte';
+</script>
+
 <main class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] py-[100px]">
 	<img src="TechReisLogo.webp" alt="Tech Reis Company Logo" width="512" />
 	<p class="text-center">
@@ -28,3 +32,5 @@
 		</p>
 	</section>
 </main>
+
+<Footer />

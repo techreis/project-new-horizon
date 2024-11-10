@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/components/ui/Footer/Footer.svelte';
 	import { Earth, Quote, Rocket, Sprout, Users } from 'lucide-svelte';
 	import ComparisonCard from './_components/ComparisonCard.svelte';
 	import CultureCard from './_components/CultureCard.svelte';
@@ -148,33 +149,6 @@
 			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 3</div>
 		</div>
 	</section>
-
-	<!-- Contact Form -->
-	<section class="bg-navy-900 rounded-lg p-8 text-white">
-		<h2 class="mb-6 text-2xl font-bold">Yes! I want to know more...</h2>
-		<p class="mb-6">Get in touch with our friendly team of experts.</p>
-
-		<form class="grid gap-4 md:grid-cols-2">
-			<input type="text" placeholder="Name *" class="rounded p-2 text-gray-800" />
-			<input type="email" placeholder="Email *" class="rounded p-2 text-gray-800" />
-			<input type="text" placeholder="Phone Number *" class="rounded p-2 text-gray-800" />
-			<input type="text" placeholder="Company *" class="rounded p-2 text-gray-800" />
-			<textarea placeholder="Comments/Questions" class="rounded p-2 text-gray-800 md:col-span-2"
-			></textarea>
-
-			<div class="md:col-span-2">
-				<label class="flex items-center gap-2">
-					<input type="checkbox" class="rounded" />
-					<span class="text-sm">I consent to my submitted data being collected and stored</span>
-				</label>
-			</div>
-
-			<button
-				type="submit"
-				class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 md:col-span-2"
-			>
-				Submit
-			</button>
-		</form>
-	</section>
 </main>
+
+<Footer />
