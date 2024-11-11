@@ -27,7 +27,7 @@ export const actions = {
 
 		try {
 			console.log('Sanitized data:', sanitizedData); // Debug log
-			fetch('https://dev.global.techreis.co.jp/dev/global/contacts', {
+			fetch('https://0d8n9wqb33.execute-api.ap-northeast-1.amazonaws.com/dev/global/contacts', {
 				method: 'POST',
 				body: JSON.stringify(sanitizedData),
 				headers: {
