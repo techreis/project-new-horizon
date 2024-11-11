@@ -1,9 +1,10 @@
-<script lang="ts">
-  import "../app.css";
-	import Navigation from "./_components/Navigation.svelte";
+<script>
+	import '../app.css';
+	import Navigation from './_components/Navigation.svelte';
+	let { children } = $props();
 </script>
 
 <Navigation />
 <div class="pt-[80px] md:pt-[100px]">
-  <slot />
+	{@render children()}
 </div>
