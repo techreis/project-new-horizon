@@ -107,7 +107,7 @@
 	</div>
 
 	<!-- Testimonials, Customers, Achievements -->
-	<section class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] py-[100px]">
+	<section class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] p-4 py-[100px]">
 		<h2 class="text-center">Testimonials</h2>
 		<div class="mx-auto flex max-w-3xl gap-x-[25px] rounded-lg bg-white p-[25px] shadow-lg">
 			<Quote class="h-[24px] w-[24px]" />
@@ -128,15 +128,15 @@
 
 		<!-- Customers -->
 		<h2 class="text-center">Customers</h2>
-		<div
-			class="grid grid-cols-2 items-center justify-items-center gap-8 md:grid-cols-3 lg:grid-cols-6"
-		>
-			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 1</div>
-			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 2</div>
-			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 3</div>
-			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 4</div>
-			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 5</div>
-			<div class="flex h-16 w-32 items-center justify-center rounded bg-gray-100">Logo 6</div>
+		<div class="grid grid-cols-3 items-center justify-center gap-8 lg:grid-cols-6">
+			<img src="/logos/cellpromote.jpg" alt="Cell Promote Logo" />
+			<img src="/logos/DXO.png" alt="DXO Logo" />
+			<img src="/logos/edzeal.jpg" alt="Edzeal Logo" />
+			<img src="/logos/joint-crew.png" alt="JointCrew Logo" />
+			<img src="/logos/link.png" alt="Link Logo" />
+			<img src="/logos/marvel.jpg" alt="Marvel Logo" />
+			<img src="/logos/tj-micro.png" alt="TJ-Mirco Logo" />
+			<img src="/logos/zeronetworks.png" alt="ZeroNetworks Logo" />
 		</div>
 
 		<!-- Achievements -->
