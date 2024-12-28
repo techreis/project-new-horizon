@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { Component } from 'svelte';
+	import type { ComponentType } from 'svelte';
 
 	interface Props {
 		title: string;
 		description: string;
-		Icon: Component;
+		Icon: ComponentType; // FIXME: ComponentType is deprecated so replace when possible
 	}
 
 	let { title, description, Icon }: Props = $props();

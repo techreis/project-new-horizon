@@ -1,0 +1,56 @@
+basic:
+  name: 'Samuel Short'
+  slug: 'samuel-short'
+  role: 'Global SE'
+  top_skills:
+    - 'Full-Stack Engineer'
+    - 'English'
+
+profile:
+  introduction: 'This is some intro text about me :)'
+
+skills:
+  spoken_languages:
+    - 'English (Native)'
+    - 'Japanese (N1 - Business Level)'
+  programming_languages:
+    - 'HTML'
+    - 'CSS'
+    - 'JavaScript'
+    - 'TypeScript'
+    - 'C#'
+    - 'C++'
+    - 'Python'
+    - 'Go'
+  frameworks:
+    - 'NodeJS'
+    - 'React'
+    - 'NextJS'
+    - 'Svelte/SvelteKit'
+  databases:
+    - 'PostgreSQL'
+    - 'MongoDB'
+    - 'SQLite'
+  cloud_platforms:
+    - 'AWS'
+    - 'Azure'
+    - 'Vercel'
+  tools:
+    - 'Git'
+    - 'GitHub'
+
+work_history:
+  - name: 'TechReis'
+    role: 'Global SE'
+    team_size: 3
+    description: 'I developed new technologies to improve departmental efficiency.'
+    start_date: '2024-09-01'
+    end_date: '' # If an empty string is provided, the UI will replace this with "Current"
+    technologies:
+      - 'TypeScript'
+      - 'NodeJS'
+      - 'Svelte'
+      - 'SvelteKit'
+      - 'TailwindCSS'
+      - 'Vitest'
+      - 'Playwright'

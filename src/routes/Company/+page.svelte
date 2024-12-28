@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Footer from '$lib/components/ui/Footer/Footer.svelte';
 </script>
 
 <main class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] py-[100px]">
@@ -32,5 +31,3 @@
 		</p>
 	</section>
 </main>
-
-<Footer />

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Footer from '$lib/components/ui/Footer/Footer.svelte';
 	import { Earth, Quote, Rocket, Sprout, Users } from 'lucide-svelte';
 	import ComparisonCard from './_components/ComparisonCard.svelte';
 	import CultureCard from './_components/CultureCard.svelte';
@@ -82,7 +81,6 @@
 			<h2 class="text-white">Our Culture</h2>
 
 			<div class="grid gap-[50px] lg:grid-cols-2">
-				<!-- FIXME: Icon library works but highlights issues with using Svelte 5 prop component passing -->
 				<!-- Culture Cards -->
 				<CultureCard
 					title="Agile Development"
@@ -150,5 +148,3 @@
 		</div>
 	</section>
 </main>
-
-<Footer />

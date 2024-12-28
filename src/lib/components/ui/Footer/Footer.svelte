@@ -23,30 +23,5 @@
 				</p>
 			</div>
 		</div>
-
-		<form class="grid gap-4 md:grid-cols-2">
-			<input type="text" placeholder="Name *" class="rounded p-2 text-gray-800" />
-			<input type="email" placeholder="Email *" class="rounded p-2 text-gray-800" />
-			<input type="text" placeholder="Phone Number *" class="rounded p-2 text-gray-800" />
-			<input type="text" placeholder="Company *" class="rounded p-2 text-gray-800" />
-			<input type="text" placeholder="Subject *" class="rounded p-2 text-gray-800 md:col-span-2" />
-			<textarea placeholder="Comments/Questions" class="rounded p-2 text-gray-800 md:col-span-2"
-			></textarea>
-
-			<div class="md:col-span-2">
-				<label class="flex items-center gap-2">
-					<input bind:checked={hasConsented} type="checkbox" class="rounded" />
-					<span class="text-sm">I consent to my submitted data being collected and stored</span>
-				</label>
-			</div>
-
-			<button
-				type="submit"
-				disabled={!hasConsented}
-				class="btn btn-primary rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 disabled:bg-blue-700/50 disabled:text-white/50 md:col-span-2"
-			>
-				Submit
-			</button>
-		</form>
 	</section>
 </footer>
