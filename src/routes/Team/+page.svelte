@@ -1,6 +1,1 @@
-<script lang="ts">
-	let { data } = $props();
-	console.log(data);
-</script>
-
-<p>{data.profiles.profiles}</p>
+<p class="w-full text-center text-xl font-semibold">Explore our catalog of specialists</p>

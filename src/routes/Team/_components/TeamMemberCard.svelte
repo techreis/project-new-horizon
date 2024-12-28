@@ -8,7 +8,6 @@
 	};
 
 	let { engineerData }: TeamMemberCardProps = $props();
-	console.log(engineerData.skills.programming_languages[0]);
 
 	function handleClick() {
 		goto(`/team/${engineerData.basic.slug}`);

@@ -6,7 +6,7 @@
 	<p class="text-center">
 		Established in 2019, Tech Reis Inc. is an IT consultancy and development company based in Tokyo,
 		Japan.
-		<br />The rest of this is placeholder text that I will udpate in my final passthrough of all the
+		<br />The rest of this is placeholder text that I will update in my final passthrough of all the
 		content.
 	</p>
 

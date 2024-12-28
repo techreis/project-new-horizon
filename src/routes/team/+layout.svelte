@@ -3,7 +3,7 @@
 	import TeamMemberCard from './_components/TeamMemberCard.svelte';
 </script>
 
-<main class="flex min-h-[800px] gap-x-[50px] overflow-visible p-[25px]">
+<main class="mx-auto flex min-h-[800px] max-w-[1200px] gap-x-[50px] overflow-visible p-[25px]">
 	<!-- SEARCH BAR -->
 	<section class=" flex max-h-[800px] min-w-[350px] flex-col gap-y-[20px]">
 		<form>

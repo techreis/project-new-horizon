@@ -1,56 +1,68 @@
 basic:
   name: 'Yuta Shimogishi'
   slug: 'yuta-shimogishi'
-  role: 'CEO'
+  role: 'Senior UX Designer'
   top_skills:
-    - 'Full-Stack Engineer'
-    - 'English'
+    - 'User Experience Design'
+    - 'Prototyping'
 
 profile:
-  introduction: 'This is some intro text about me :)'
+  introduction: |
+    "Yuta is a seasoned UX designer with a passion for creating intuitive, user-friendly interfaces. With over eight years of experience, he excels in user research, prototyping, and building accessible design systems."
 
 skills:
   spoken_languages:
-    - 'English (Native)'
-    - 'Japanese (N1 - Business Level)'
+    - 'Japanese (Native)'
+    - 'English (Business Level)'
   programming_languages:
     - 'HTML'
     - 'CSS'
     - 'JavaScript'
-    - 'TypeScript'
-    - 'C#'
-    - 'C++'
-    - 'Python'
-    - 'Go'
   frameworks:
-    - 'NodeJS'
-    - 'React'
-    - 'NextJS'
-    - 'Svelte/SvelteKit'
+    - 'Bootstrap'
+    - 'TailwindCSS'
   databases:
-    - 'PostgreSQL'
-    - 'MongoDB'
-    - 'SQLite'
+    - 'None'
   cloud_platforms:
-    - 'AWS'
-    - 'Azure'
-    - 'Vercel'
+    - 'None'
   tools:
-    - 'Git'
-    - 'GitHub'
+    - 'Figma'
+    - 'Adobe XD'
 
 work_history:
-  - name: 'TechReis'
-    role: 'Global SE'
-    team_size: 3
-    description: 'I developed new technologies to improve departmental efficiency.'
-    start_date: '2024-09-01'
-    end_date: '' # If an empty string is provided, the UI will replace this with "Current"
+  - name: 'EcomDesign Co.'
+    role: 'Lead UX Designer'
+    team_size: 8
+    description: 'Redesigned a popular e-commerce platform, increasing user engagement by 30%.'
+    start_date: '2018-06-01'
+    end_date: '2024-08-31'
     technologies:
-      - 'TypeScript'
-      - 'NodeJS'
-      - 'Svelte'
-      - 'SvelteKit'
-      - 'TailwindCSS'
-      - 'Vitest'
-      - 'Playwright'
+      - 'Figma'
+      - 'HTML'
+      - 'CSS'
+  - name: 'Innova Solutions'
+    role: 'Software Consultant'
+    team_size: 5
+    description: 'Led the migration of a legacy CRM system to a modern cloud-based platform, improving user adoption and reducing maintenance costs.'
+    start_date: '2022-04-01'
+    end_date: '2024-08-31'
+    technologies:
+      - 'React'
+      - 'NextJS'
+      - 'Azure'
+      - 'GraphQL'
+      - 'C#'
+      - '.NET Core'
+  - name: 'Vertex Dynamics'
+    role: 'Frontend Developer'
+    team_size: 7
+    description: 'Implemented dynamic user interfaces for e-commerce platforms, enhancing user experience and increasing customer retention.'
+    start_date: '2020-01-01'
+    end_date: '2022-03-31'
+    technologies:
+      - 'HTML'
+      - 'CSS'
+      - 'JavaScript'
+      - 'Vue.js'
+      - 'SASS'
+      - 'Jest'
