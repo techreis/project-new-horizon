@@ -3,7 +3,7 @@
 </script>
 
 <footer class="w-full bg-primary py-[100px]">
-	<section class="mx-auto grid w-[1200px] grid-cols-2 p-[10px] text-white">
+	<section class="mx-auto max-w-[1200px] grid-cols-2 p-[10px] text-white">
 		<div>
 			<h3 class="font-semibold text-white">Yes! I want to know more...</h3>
 			<h4 class="mb-6">
