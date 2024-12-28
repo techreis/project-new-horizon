@@ -9,6 +9,9 @@ type EngineerProfileCollection = {
 	[filename: string]: EngineerProfile;
 };
 
+// FIXME: This is a suggested way to load YAML data
+// however I think structurally it doesn't feel great to use as arrays became named properties
+// Revisit the way this is done at some point
 export const load = (async ({ setHeaders }) => {
 	const yamlDir = 'src/_yaml';
 

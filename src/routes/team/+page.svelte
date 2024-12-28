@@ -1,1 +1,6 @@
-<p>This is some placeholder text...</p>
+<script lang="ts">
+	let { data } = $props();
+	console.log(data);
+</script>
+
+<p>{data.profiles.profiles}</p>
