@@ -18,7 +18,7 @@
 </script>
 
 <nav class="fixed z-50 flex w-full items-center justify-between bg-white p-5 shadow-md">
-	<img src="TechReisLogo.webp" alt="TechReis Company Logo" width="200" />
+	<img src="/TechReisLogo.webp" alt="TechReis Company Logo" width="200" />
 	<ul class="hidden gap-[2.5rem] pr-[1.5625rem] md:flex">
 		{#each navItems as item}
 			<li><a href={item.href}>{item.label}</a></li>

@@ -1,21 +1,21 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import Tag from '$lib/components/ui/Tag.svelte';
+	import type { EngineerProfile } from '$lib/types';
 
-	export let member: {
-		name: string;
-		role: string;
-		skills: string[];
-		slug: string;
+	type TeamMemberCardProps = {
+		engineerData: EngineerProfile;
 	};
 
+	let { engineerData }: TeamMemberCardProps = $props();
+
 	function handleClick() {
-		goto(`/team/${member.slug}`);
+		goto(`/team/${engineerData.basic.slug}`);
 	}
 </script>
 
 <div
-	class="flex flex-col gap-[10px] rounded-[12px] p-[25px] shadow-xl hover:cursor-pointer hover:bg-primary"
+	class="flex flex-col gap-[10px] rounded-[12px] border border-slate-500/20 p-[12px] hover:cursor-pointer hover:bg-primary"
 	onclick={handleClick}
 	onkeydown={(e) => e.key === 'Enter' && handleClick()}
 	role="button"
@@ -24,12 +24,12 @@
 	<div class="flex gap-x-[10px]">
 		<div class="bg-red bg-grey h-[40px] w-[40px] rounded-full bg-slate-500"></div>
 		<div class="flex flex-col">
-			<p>{member.name}</p>
-			<p class="font-semibold opacity-50">{member.role}</p>
+			<p>{engineerData.basic.name}</p>
+			<p class="font-semibold opacity-50">{engineerData.basic.role}</p>
 		</div>
 	</div>
 	<div class="flex gap-x-[10px]">
-		{#each member.skills as skill}
+		{#each engineerData.basic.top_skills as skill}
 			<Tag text={skill} />
 		{/each}
 	</div>

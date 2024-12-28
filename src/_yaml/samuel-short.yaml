@@ -1,0 +1,130 @@
+basic:
+  name: 'Samuel Short'
+  slug: 'samuel-short'
+  role: 'Global SE'
+  top_skills:
+    - 'Full-Stack Engineer'
+    - 'English'
+
+profile:
+  introduction: |
+    "Sam is a dedicated frontend engineer with a strong focus on creating seamless user experiences and clean, maintainable code. With expertise in modern frameworks such as React, Next.js, and TypeScript, Sam is skilled in building responsive, accessible, and visually appealing interfaces."
+
+skills:
+  spoken_languages:
+    - 'English (Native)'
+    - 'Japanese (N1 - Business Level)'
+  programming_languages:
+    - 'HTML'
+    - 'CSS'
+    - 'JavaScript'
+    - 'TypeScript'
+    - 'C#'
+    - 'C++'
+    - 'Python'
+    - 'Go'
+    - 'HTML'
+    - 'CSS'
+    - 'JavaScript'
+    - 'TypeScript'
+    - 'C#'
+    - 'C++'
+    - 'Python'
+    - 'Go'
+  frameworks:
+    - 'NodeJS'
+    - 'React'
+    - 'NextJS'
+    - 'Svelte/SvelteKit'
+  databases:
+    - 'PostgreSQL'
+    - 'MongoDB'
+    - 'SQLite'
+  cloud_platforms:
+    - 'AWS'
+    - 'Azure'
+    - 'Vercel'
+  tools:
+    - 'Git'
+    - 'GitHub'
+
+work_history:
+  - name: 'TechReis'
+    role: 'Global SE'
+    team_size: 3
+    description: 'I developed new technologies to improve departmental efficiency.'
+    start_date: '2024-09-01'
+    end_date: '' # If an empty string is provided, the UI will replace this with "Current"
+    technologies:
+      - 'TypeScript'
+      - 'NodeJS'
+      - 'Svelte'
+      - 'SvelteKit'
+      - 'TailwindCSS'
+      - 'Vitest'
+      - 'Playwright'
+  - name: 'Innova Solutions'
+    role: 'Software Consultant'
+    team_size: 5
+    description: 'Led the migration of a legacy CRM system to a modern cloud-based platform, improving user adoption and reducing maintenance costs.'
+    start_date: '2022-04-01'
+    end_date: '2024-08-31'
+    technologies:
+      - 'React'
+      - 'NextJS'
+      - 'Azure'
+      - 'GraphQL'
+      - 'C#'
+      - '.NET Core'
+
+  - name: 'Vertex Dynamics'
+    role: 'Frontend Developer'
+    team_size: 7
+    description: 'Implemented dynamic user interfaces for e-commerce platforms, enhancing user experience and increasing customer retention.'
+    start_date: '2020-01-01'
+    end_date: '2022-03-31'
+    technologies:
+      - 'HTML'
+      - 'CSS'
+      - 'JavaScript'
+      - 'Vue.js'
+      - 'SASS'
+      - 'Jest'
+
+  - name: 'GlobalTech Inc.'
+    role: 'Project Manager'
+    team_size: 10
+    description: 'Managed cross-functional teams to deliver a custom ERP solution for a multinational manufacturing company.'
+    start_date: '2018-06-01'
+    end_date: '2019-12-31'
+    technologies:
+      - 'PowerBI'
+      - 'SharePoint'
+      - 'Microsoft Dynamics'
+      - 'SQL Server'
+
+  - name: 'Creative Systems'
+    role: 'Full Stack Developer'
+    team_size: 4
+    description: 'Developed a task management app for startups, integrating real-time collaboration and cloud storage features.'
+    start_date: '2015-09-01'
+    end_date: '2018-05-31'
+    technologies:
+      - 'AngularJS'
+      - 'NodeJS'
+      - 'Express'
+      - 'MongoDB'
+      - 'Bootstrap'
+
+  - name: 'BrightPath Solutions'
+    role: 'Junior Developer'
+    team_size: 6
+    description: 'Contributed to the development of internal tools for data analytics, improving workflow efficiency across departments.'
+    start_date: '2013-07-01'
+    end_date: '2015-08-31'
+    technologies:
+      - 'PHP'
+      - 'MySQL'
+      - 'jQuery'
+      - 'WordPress'
+      - 'Laravel'

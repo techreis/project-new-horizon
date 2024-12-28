@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Footer from '$lib/components/ui/Footer/Footer.svelte';
 </script>
 
 <main class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] py-[100px]">
@@ -7,7 +6,7 @@
 	<p class="text-center">
 		Established in 2019, Tech Reis Inc. is an IT consultancy and development company based in Tokyo,
 		Japan.
-		<br />The rest of this is placeholder text that I will udpate in my final passthrough of all the
+		<br />The rest of this is placeholder text that I will update in my final passthrough of all the
 		content.
 	</p>
 
@@ -32,5 +31,3 @@
 		</p>
 	</section>
 </main>
-
-<Footer />

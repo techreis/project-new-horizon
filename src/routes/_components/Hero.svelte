@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
@@ -25,8 +26,18 @@
 				/>
 			</p>
 			<div class="flex gap-[25px]">
-				<Button variant="secondary">Meet Our Team</Button>
-				<Button variant="secondary">Our Projects</Button>
+				<Button
+					variant="secondary"
+					onclick={() => {
+						goto('/team');
+					}}>Meet Our Team</Button
+				>
+				<Button
+					variant="secondary"
+					onclick={() => {
+						goto('/team');
+					}}>Our Projects</Button
+				>
 			</div>
 		</div>
 	</div>

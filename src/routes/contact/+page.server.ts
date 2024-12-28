@@ -3,6 +3,7 @@ import sanitizeHtml from 'sanitize-html'; // For XSS prevention
 import { zod } from 'sveltekit-superforms/adapters';
 import { superValidate } from 'sveltekit-superforms/server';
 import { contactSchema } from './schema';
+import { CONTACT_FORM_API } from '$env/static/private';
 
 export const load = async () => {
 	const form = await superValidate(zod(contactSchema));
@@ -27,7 +28,7 @@ export const actions = {
 
 		try {
 			console.log('Sanitized data:', sanitizedData); // Debug log
-			fetch('https://dev.global.techreis.co.jp/dev/global/contacts', {
+			fetch(`${CONTACT_FORM_API}`, {
 				method: 'POST',
 				body: JSON.stringify(sanitizedData),
 				headers: {

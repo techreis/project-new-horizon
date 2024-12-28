@@ -1,1 +1,1 @@
-<p>This is some placeholder text...</p>
+<p class="w-full text-center text-xl font-semibold">Explore our catalog of specialists</p>
