@@ -128,23 +128,57 @@
 
 		<!-- Customers -->
 		<h2 class="text-center">Customers</h2>
-		<div class="grid grid-cols-3 items-center justify-center gap-8 lg:grid-cols-6">
-			<img src="/logos/cellpromote.jpg" alt="Cell Promote Logo" />
-			<img src="/logos/DXO.png" alt="DXO Logo" />
-			<img src="/logos/edzeal.jpg" alt="Edzeal Logo" />
-			<img src="/logos/joint-crew.png" alt="JointCrew Logo" />
-			<img src="/logos/link.png" alt="Link Logo" />
-			<img src="/logos/marvel.jpg" alt="Marvel Logo" />
-			<img src="/logos/tj-micro.png" alt="TJ-Mirco Logo" />
-			<img src="/logos/zeronetworks.png" alt="ZeroNetworks Logo" />
-		</div>
-
-		<!-- Achievements -->
-		<h2 class="text-center">Achievements</h2>
-		<div class="flex justify-center gap-8">
-			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 1</div>
-			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 2</div>
-			<div class="flex h-24 w-24 items-center justify-center rounded-lg bg-gray-100">Badge 3</div>
+		<div class="flex flex-wrap items-center justify-center gap-8 px-4 lg:grid-cols-6">
+			<img
+				src="/logos/cellpromote.webp"
+				alt="Cell Promote Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
+			<img src="/logos/DXO.webp" alt="DXO Logo" loading="lazy" decoding="async" class="w-[150px]" />
+			<img
+				src="/logos/edzeal.webp"
+				alt="Edzeal Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
+			<img
+				src="/logos/joint-crew.webp"
+				alt="JointCrew Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
+			<img
+				src="/logos/link.webp"
+				alt="Link Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
+			<img
+				src="/logos/marvel.webp"
+				alt="Marvel Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
+			<img
+				src="/logos/tj-micro.webp"
+				alt="TJ-Mirco Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
+			<img
+				src="/logos/zeronetworks.webp"
+				alt="ZeroNetworks Logo"
+				loading="lazy"
+				decoding="async"
+				class="w-[150px]"
+			/>
 		</div>
 	</section>
 </main>
