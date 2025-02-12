@@ -1,13 +1,13 @@
 <script lang="ts">
 </script>
 
-<main class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] py-[100px]">
+<main class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] px-10 py-[100px]">
 	<img src="TechReisLogo.webp" alt="Tech Reis Company Logo" width="512" />
-	<p class="text-center">
+	<p>
 		Established in 2019, Tech Reis Inc. is an IT consultancy and development company based in Tokyo,
-		Japan.
-		<br />The rest of this is placeholder text that I will update in my final passthrough of all the
-		content.
+		Japan. <br />
+		Tech Reis is a modern, innovative technology consultancy based in Tokyo, Japan, blending the best
+		of Japanese service and engineering into IT solutions for the 21st century.
 	</p>
 
 	<h2>Our Mission</h2>
