@@ -17,7 +17,7 @@
 			into modern,<br />cutting-edge technology solutions for the 21st century.
 		</p>
 
-		<h2>The Tech Reis Difference</h2>
+		<h2 class="text-center">The Tech Reis Difference</h2>
 		<div class="flex flex-col lg:flex-row">
 			<ComparisonCard
 				title="Standard"
