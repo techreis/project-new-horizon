@@ -2,7 +2,7 @@
 	let hasConsented = $state(false);
 </script>
 
-<footer class="w-full bg-primary py-[100px]">
+<footer class="w-full bg-primary px-10 py-[100px]">
 	<section class="mx-auto max-w-[1200px] grid-cols-2 p-[10px] text-white">
 		<div>
 			<h3 class="font-semibold text-white">Yes! I want to know more...</h3>
