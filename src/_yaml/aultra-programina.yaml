@@ -1,0 +1,44 @@
+basic:
+  name: 'Aultra Programina'
+  slug: 'aultra-programina'
+  role: 'Cloud Developer'
+  top_skills:
+    - 'Cloud Solutions'
+    - 'Infrastructure as Code'
+
+profile:
+  introduction: |
+    "Aultra is a cloud developer with expertise in designing and implementing scalable cloud-based applications. Her focus is on leveraging modern infrastructure technologies to deliver secure and reliable solutions."
+
+skills:
+  spoken_languages:
+    - 'English (Native)'
+  programming_languages:
+    - 'Go'
+    - 'Python'
+    - 'Bash'
+  frameworks:
+    - 'Flask'
+    - 'Express.js'
+  databases:
+    - 'DynamoDB'
+    - 'MongoDB'
+  cloud_platforms:
+    - 'Azure'
+    - 'AWS'
+    - 'GCP'
+  tools:
+    - 'Terraform'
+    - 'Kubernetes'
+
+work_history:
+  - name: 'CloudInfinity'
+    role: 'Cloud Developer'
+    team_size: 4
+    description: 'Built and maintained cloud-native applications for enterprise clients.'
+    start_date: '2019-03-01'
+    end_date: '2024-08-31'
+    technologies:
+      - 'Go'
+      - 'Kubernetes'
+      - 'Terraform'
