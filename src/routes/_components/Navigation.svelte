@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { Menu, X } from 'lucide-svelte/icons';
 	import { slide } from 'svelte/transition';
 
@@ -21,7 +22,11 @@
 	<img src="/TechReisLogo.webp" alt="TechReis Company Logo" width="200" />
 	<ul class="hidden gap-[2.5rem] pr-[1.5625rem] md:flex">
 		{#each navItems as item}
-			<li><a href={item.href}>{item.label}</a></li>
+			<li>
+				<a href={item.href} class={$page.url.pathname === item.href ? 'font-bold' : ''}
+					>{item.label}</a
+				>
+			</li>
 		{/each}
 	</ul>
 	<button
@@ -50,7 +55,7 @@
 				<li class="py-2">
 					<a
 						href={item.href}
-						class="block w-full rounded p-2 hover:bg-gray-100"
+						class={`block w-full rounded p-2 hover:bg-gray-100 ${$page.url.pathname === item.href ? 'font-bold' : ''}`}
 						onclick={() => (isMenuOpen = false)}
 					>
 						{item.label}
