@@ -25,15 +25,18 @@
 				items={[
 					{
 						title: 'Months To Onboard',
-						description: 'Members are typically available to begin work the following month.'
+						description:
+							'Outstanding contracts, notice agreements, or lack of resources mean you could be waiting months to onboard new engineers.'
 					},
 					{
 						title: 'Long-term Commitment',
-						description: 'Members are typically available to begin work the following month.'
+						description:
+							'Internal Employment and company outsourcing typically lock you into long-term inflexible commitments.'
 					},
 					{
 						title: 'Static working schedule',
-						description: 'Members are typically available to begin work the following month.'
+						description:
+							'With all engineers in the same region or timezone, it can reduce flexibility to fix and monitor issues around the clock.'
 					}
 				]}
 			/>
