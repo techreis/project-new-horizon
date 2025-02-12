@@ -47,7 +47,7 @@
 {#if isMenuOpen}
 	<div
 		id="mobile-menu"
-		class="fixed left-0 top-[6.25rem] z-10 w-full bg-white shadow-md md:hidden"
+		class="fixed left-0 top-[6.25rem] z-50 w-full bg-white shadow-md md:hidden"
 		transition:slide
 	>
 		<ul class="flex flex-col p-5">
