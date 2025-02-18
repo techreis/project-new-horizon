@@ -110,7 +110,7 @@
 	</div>
 
 	<!-- Testimonials, Customers, Achievements -->
-	<section class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] p-4 py-[100px]">
+	<!-- <section class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] p-4 py-[100px]">
 		<h2 class="text-center">Testimonials</h2>
 		<div class="mx-auto flex max-w-3xl gap-x-[25px] rounded-lg bg-white p-[25px] shadow-lg">
 			<Quote class="h-[24px] w-[24px]" />
@@ -127,7 +127,7 @@
 					<span class="text-gray-600">CEO - Tech Reis</span>
 				</p>
 			</blockquote>
-		</div>
+		</div> -->
 
 		<!-- Customers -->
 		<h2 class="text-center">Customers</h2>
