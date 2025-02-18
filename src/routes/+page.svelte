@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Earth, Quote, Rocket, Sprout, Users } from 'lucide-svelte';
+	import { Earth, Rocket, Sprout, Users } from 'lucide-svelte';
 	import ComparisonCard from './_components/ComparisonCard.svelte';
 	import CultureCard from './_components/CultureCard.svelte';
 	import Hero from './_components/Hero.svelte';
@@ -111,7 +111,7 @@
 
 	<!-- Testimonials, Customers, Achievements -->
 	<section class="mx-auto flex max-w-[1200px] flex-col items-center gap-y-[50px] p-4 py-[100px]">
-		<h2 class="text-center">Testimonials</h2>
+		<!-- <h2 class="text-center">Testimonials</h2>
 		<div class="mx-auto flex max-w-3xl gap-x-[25px] rounded-lg bg-white p-[25px] shadow-lg">
 			<Quote class="h-[24px] w-[24px]" />
 			<blockquote class="flex flex-1 flex-col gap-y-[10px]">
@@ -127,7 +127,7 @@
 					<span class="text-gray-600">CEO - Tech Reis</span>
 				</p>
 			</blockquote>
-		</div>
+		</div> -->
 
 		<!-- Customers -->
 		<h2 class="text-center">Customers</h2>
