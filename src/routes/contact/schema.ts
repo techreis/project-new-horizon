@@ -1,4 +1,3 @@
-// schema.ts
 import { z } from 'zod';
 
 export const contactSchema = z.object({
@@ -12,4 +11,4 @@ export const contactSchema = z.object({
 	message: z.string().min(1, 'Message is required')
 });
 
-export type ContactSchema = typeof contactSchema._type;
+export type ContactSchema = z.infer<typeof contactSchema>;

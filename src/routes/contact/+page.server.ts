@@ -1,33 +1,38 @@
 import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
-import sanitizeHtml from 'sanitize-html'; // For XSS prevention
+import sanitizeHtml from 'sanitize-html';
+import { superValidate, message } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
-import { superValidate } from 'sveltekit-superforms/server';
-import { contactSchema } from './schema';
+import type { Actions, PageServerLoad } from './$types';
+import { contactSchema, type ContactSchema } from './schema';
 
-export const load = async () => {
+export const load: PageServerLoad = async () => {
+	// @ts-expect-error - Known zod/superforms type compatibility issue
 	const form = await superValidate(zod(contactSchema));
 	return { form };
 };
 
-export const actions = {
+export const actions: Actions = {
 	default: async ({ request }) => {
+		// @ts-expect-error - Known zod/superforms type compatibility issue
 		const form = await superValidate(request, zod(contactSchema));
 
 		if (!form.valid) {
-			console.log('Validation failed:', form.errors); // Debug Log
+			console.log('Validation failed:', form.errors);
 			return fail(400, { form });
 		}
 
+		const data = form.data as ContactSchema;
+
 		// Sanitize input
 		const sanitizedData = {
-			...form.data,
-			comments: form.data.message ? sanitizeHtml(form.data.message) : '',
-			subject: sanitizeHtml(form.data.subject)
+			...data,
+			comments: data.message ? sanitizeHtml(data.message) : '',
+			subject: sanitizeHtml(data.subject)
 		};
 
 		try {
-			console.log('Sanitized data:', sanitizedData); // Debug log
+			console.log('Sanitized data:', sanitizedData);
 			fetch(`${env.CONTACT_FORM_API}`, {
 				method: 'POST',
 				body: JSON.stringify(sanitizedData),
@@ -37,12 +42,9 @@ export const actions = {
 				}
 			});
 
-			return {
-				form,
-				success: true
-			};
+			return message(form, 'Form submitted successfully!');
 		} catch (error) {
-			console.error('Server error:', error); // Debug log
+			console.error('Server error:', error);
 			return fail(500, {
 				form,
 				error: 'Failed to submit form'

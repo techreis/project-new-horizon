@@ -1,10 +1,12 @@
 <script lang="ts">
-	import type { ComponentType } from 'svelte';
+	import type { SvelteComponent } from 'svelte';
 
 	interface Props {
 		title: string;
 		description: string;
-		Icon: ComponentType; // FIXME: ComponentType is deprecated so replace when possible
+		// Using typeof SvelteComponent for lucide-svelte icon compatibility
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		Icon: typeof SvelteComponent<any>;
 	}
 
 	let { title, description, Icon }: Props = $props();

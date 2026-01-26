@@ -1,17 +1,13 @@
-// +layout.server.ts
 import type { EngineerProfile } from '$lib/types';
-import { readdir, readFile } from 'fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import yaml from 'js-yaml';
-import { join } from 'path';
+import { join } from 'node:path';
 import type { LayoutServerLoad } from './$types';
 
 type EngineerProfileCollection = {
 	[filename: string]: EngineerProfile;
 };
 
-// FIXME: This is a suggested way to load YAML data
-// however I think structurally it doesn't feel great to use as arrays became named properties
-// Revisit the way this is done at some point
 export const load = (async ({ setHeaders }) => {
 	const yamlDir = 'src/_yaml';
 
@@ -22,10 +18,12 @@ export const load = (async ({ setHeaders }) => {
 
 	try {
 		const files = await readdir(yamlDir);
-		const yamlFiles = files.filter((file) => file.endsWith('.yml') || file.endsWith('.yaml'));
+		const yamlFiles = files.filter(
+			(file: string) => file.endsWith('.yml') || file.endsWith('.yaml')
+		);
 
 		const profilesData = await Promise.all(
-			yamlFiles.map(async (filename) => {
+			yamlFiles.map(async (filename: string) => {
 				const filePath = join(yamlDir, filename);
 				const content = await readFile(filePath, 'utf8');
 				return {
@@ -36,7 +34,10 @@ export const load = (async ({ setHeaders }) => {
 		);
 
 		const profiles: EngineerProfileCollection = Object.fromEntries(
-			profilesData.map(({ name, content }) => [name.replace(/\.(yml|yaml)$/, ''), content])
+			profilesData.map(({ name, content }: { name: string; content: EngineerProfile }) => [
+				name.replace(/\.(yml|yaml)$/, ''),
+				content
+			])
 		);
 
 		return {

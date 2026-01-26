@@ -3,17 +3,23 @@
 	import Tabs from './_components/Tabs.svelte';
 
 	let { data } = $props();
-	let memberSlug = $derived($page.params.member);
-	let member = $derived(data.profiles[memberSlug]);
+	let memberSlug = $derived($page.params.member ?? '');
+	let member = $derived(memberSlug ? data.profiles[memberSlug] : undefined);
 </script>
 
-<section class="flex w-full flex-col gap-y-4">
-	<div class="flex gap-x-[25px]">
-		<div class="bg-red bg-grey h-[80px] w-[80px] rounded-full bg-slate-500"></div>
-		<div class="flex flex-col">
-			<h3>{member.basic.name}</h3>
-			<h4 class="font-semibold opacity-50">{member.basic.role}</h4>
+{#if member}
+	<section class="flex w-full flex-col gap-y-4">
+		<div class="flex gap-x-[25px]">
+			<div class="bg-red bg-grey h-[80px] w-[80px] rounded-full bg-slate-500"></div>
+			<div class="flex flex-col">
+				<h3>{member.basic.name}</h3>
+				<h4 class="font-semibold opacity-50">{member.basic.role}</h4>
+			</div>
 		</div>
-	</div>
-	<Tabs {member} />
-</section>
+		<Tabs {member} />
+	</section>
+{:else}
+	<section class="flex w-full flex-col gap-y-4">
+		<p>Member not found</p>
+	</section>
+{/if}

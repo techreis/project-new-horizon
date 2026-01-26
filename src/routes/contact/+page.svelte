@@ -1,21 +1,19 @@
 <script lang="ts">
-	import { zod } from 'sveltekit-superforms/adapters';
-	import { superForm } from 'sveltekit-superforms/client';
+	import { superForm } from 'sveltekit-superforms';
+	import { zodClient } from 'sveltekit-superforms/adapters';
 	import type { PageData } from './$types';
 	import { contactSchema } from './schema';
 
-	let { data }: { data: PageData } = $props();
+	const props: { data: PageData } = $props();
 	let hasConsented = $state(false);
 
-	const { form, errors, enhance } = superForm(data.form, {
-		validators: zod(contactSchema),
+	const { form, errors, enhance } = superForm(props.data.form, {
+		// @ts-expect-error - Known zod/superforms type compatibility issue
+		validators: zodClient(contactSchema),
 		resetForm: false,
-		onUpdate({ form, result }) {
+		onUpdate({ result }) {
 			if (result?.type === 'success') {
-				if (result.data?.success) {
-					alert('Form submitted successfully!');
-					// Only reset the form on successful submission
-				}
+				alert('Form submitted successfully!');
 			}
 		},
 		onError({ result }) {
