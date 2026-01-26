@@ -1,33 +1,112 @@
 <script lang="ts">
-	let { data, children } = $props();
+	import type { SearchTag } from '$lib/types';
+	import { setContext } from 'svelte';
 	import TeamMemberCard from './_components/TeamMemberCard.svelte';
+	import SearchInput from './_components/SearchInput.svelte';
 
-	let searchQuery = $state('');
+	let { data, children } = $props();
 
+	
+	let selectedTags = $state<SearchTag[]>([]);
+	let textQuery = $state('');
+
+	// Provide selected tags to child components via context
+	setContext('team-search-tags', () => selectedTags);
+
+	function handleTagsChange(tags: SearchTag[]) {
+		selectedTags = tags;
+	}
+
+	function handleTextQueryChange(query: string) {
+		textQuery = query;
+	}
+
+	// Filter profiles based on selected tags and text query
 	const filteredProfiles = $derived(
-		Object.entries(data.profiles).filter(([_, content]) =>
-			content.basic.name.toLowerCase().includes(searchQuery.toLowerCase())
-		)
+		Object.entries(data.profiles).filter(([_, profile]) => {
+			// Text query filter (name search)
+			const matchesText =
+				!textQuery.trim() ||
+				profile.basic.name.toLowerCase().includes(textQuery.toLowerCase());
+
+			// Tag filter
+			const matchesTags =
+				selectedTags.length === 0 ||
+				selectedTags.some((tag) => {
+					switch (tag.category) {
+						case 'programming_languages':
+							return profile.skills.programming_languages?.some(
+								(s) => s.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'spoken_languages':
+							return profile.skills.spoken_languages?.some(
+								(s) => s.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'frameworks':
+							return profile.skills.frameworks?.some(
+								(s) => s.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'databases':
+							return profile.skills.databases?.some(
+								(s) => s.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'cloud_platforms':
+							return profile.skills.cloud_platforms?.some(
+								(s) => s.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'tools':
+							return profile.skills.tools?.some(
+								(s) => s.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'roles':
+							return profile.work_history?.some(
+								(w) => w.role.toLowerCase() === tag.value.toLowerCase()
+							);
+						case 'technologies':
+							return profile.work_history?.some((w) =>
+								w.technologies?.some((t) => t.toLowerCase() === tag.value.toLowerCase())
+							);
+						default:
+							return false;
+					}
+				});
+
+			return matchesText && matchesTags;
+		})
 	);
 </script>
 
-<main class="mx-auto flex min-h-[800px] max-w-[1200px] gap-x-[50px] overflow-visible p-[25px]">
-	<section class="flex max-h-[800px] min-w-[350px] flex-col gap-y-[20px]">
-		<form>
-			<input
-				type="text"
-				bind:value={searchQuery}
-				placeholder="Search members, skills, or other keywords..."
-				class="w-full rounded-full border border-gray-300 px-4 py-2 text-base outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+<main class="mx-auto flex min-h-[800px] max-w-[1400px] gap-x-8 overflow-visible p-6">
+	<section class="flex max-h-[800px] w-[380px] min-w-[380px] flex-col gap-y-5">
+		<div class="card bg-base-200/50 p-4">
+			<SearchInput
+				profiles={data.profiles}
+				{selectedTags}
+				{textQuery}
+				onTagsChange={handleTagsChange}
+				onTextQueryChange={handleTextQueryChange}
 			/>
-		</form>
+		</div>
 
-		<div class="flex max-h-[800px] flex-col gap-y-4 overflow-y-auto">
-			{#each filteredProfiles as [filename, content]}
-				<TeamMemberCard engineerData={content} />
-			{/each}
+		<div class="flex flex-1 flex-col gap-y-3 overflow-y-auto pr-2">
+			{#if filteredProfiles.length === 0}
+				<div class="card bg-base-200/30 p-8 text-center">
+					<p class="text-base-content/60">No team members found</p>
+					{#if selectedTags.length > 0 || textQuery}
+						<p class="mt-2 text-sm text-base-content/40">
+							Try adjusting your search or removing some filters
+						</p>
+					{/if}
+				</div>
+			{:else}
+				{#each filteredProfiles as [filename, content]}
+					<TeamMemberCard engineerData={content} />
+				{/each}
+			{/if}
 		</div>
 	</section>
 
-	{@render children()}
+	<section class="flex-1">
+		{@render children()}
+	</section>
 </main>

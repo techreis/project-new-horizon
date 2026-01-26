@@ -26,3 +26,24 @@ export type EngineerProfile = {
 		technologies: string[];
 	}[];
 };
+
+export type SkillCategory =
+	| 'programming_languages'
+	| 'spoken_languages'
+	| 'frameworks'
+	| 'databases'
+	| 'cloud_platforms'
+	| 'tools'
+	| 'roles'
+	| 'technologies';
+
+export type SearchTag = {
+	value: string;
+	category: SkillCategory;
+};
+
+export type SkillSuggestion = {
+	value: string;
+	category: SkillCategory;
+	label: string;
+};
