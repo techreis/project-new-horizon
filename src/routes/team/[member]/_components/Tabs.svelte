@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { EngineerProfile, SearchTag, SkillCategory } from '$lib/types';
+	import { Briefcase, Cloud, Code, Database, Globe, Layers, Wrench } from 'lucide-svelte';
 	import { getContext } from 'svelte';
-	import { Code, Globe, Layers, Database, Cloud, Wrench, Briefcase } from 'lucide-svelte';
 
 	type TabsProps = {
 		member: EngineerProfile;
@@ -20,16 +20,20 @@
 		);
 	}
 
+	// Check if a technology matches any selected tag (across all relevant categories)
+	function isTechHighlighted(tech: string): boolean {
+		const techLower = tech.toLowerCase();
+		return selectedTags.some((tag) => tag.value.toLowerCase() === techLower);
+	}
+
 	// Check if a work history entry matches any selected tag (role or technologies)
 	function isWorkHighlighted(work: EngineerProfile['work_history'][0]): boolean {
 		return selectedTags.some((tag) => {
 			if (tag.category === 'roles') {
 				return work.role.toLowerCase() === tag.value.toLowerCase();
 			}
-			if (tag.category === 'technologies') {
-				return work.technologies?.some((t) => t.toLowerCase() === tag.value.toLowerCase());
-			}
-			return false;
+			// Check technologies against ANY tag value (not just 'technologies' category)
+			return work.technologies?.some((t) => t.toLowerCase() === tag.value.toLowerCase());
 		});
 	}
 
@@ -76,7 +80,8 @@
 							class:bg-primary={isSkillHighlighted(language, 'spoken_languages')}
 							class:text-white={isSkillHighlighted(language, 'spoken_languages')}
 							class:border-primary={isSkillHighlighted(language, 'spoken_languages')}
-						>{language}</span>
+							>{language}</span
+						>
 					{/each}
 				</div>
 			</section>
@@ -94,7 +99,8 @@
 							class:bg-primary={isSkillHighlighted(language, 'programming_languages')}
 							class:text-white={isSkillHighlighted(language, 'programming_languages')}
 							class:border-primary={isSkillHighlighted(language, 'programming_languages')}
-						>{language}</span>
+							>{language}</span
+						>
 					{/each}
 				</div>
 			</section>
@@ -111,8 +117,8 @@
 							class:badge-outline={!isSkillHighlighted(framework, 'frameworks')}
 							class:bg-primary={isSkillHighlighted(framework, 'frameworks')}
 							class:text-white={isSkillHighlighted(framework, 'frameworks')}
-							class:border-primary={isSkillHighlighted(framework, 'frameworks')}
-						>{framework}</span>
+							class:border-primary={isSkillHighlighted(framework, 'frameworks')}>{framework}</span
+						>
 					{/each}
 				</div>
 			</section>
@@ -129,8 +135,8 @@
 							class:badge-outline={!isSkillHighlighted(database, 'databases')}
 							class:bg-primary={isSkillHighlighted(database, 'databases')}
 							class:text-white={isSkillHighlighted(database, 'databases')}
-							class:border-primary={isSkillHighlighted(database, 'databases')}
-						>{database}</span>
+							class:border-primary={isSkillHighlighted(database, 'databases')}>{database}</span
+						>
 					{/each}
 				</div>
 			</section>
@@ -148,7 +154,8 @@
 							class:bg-primary={isSkillHighlighted(platform, 'cloud_platforms')}
 							class:text-white={isSkillHighlighted(platform, 'cloud_platforms')}
 							class:border-primary={isSkillHighlighted(platform, 'cloud_platforms')}
-						>{platform}</span>
+							>{platform}</span
+						>
 					{/each}
 				</div>
 			</section>
@@ -165,8 +172,8 @@
 							class:badge-outline={!isSkillHighlighted(tool, 'tools')}
 							class:bg-primary={isSkillHighlighted(tool, 'tools')}
 							class:text-white={isSkillHighlighted(tool, 'tools')}
-							class:border-primary={isSkillHighlighted(tool, 'tools')}
-						>{tool}</span>
+							class:border-primary={isSkillHighlighted(tool, 'tools')}>{tool}</span
+						>
 					{/each}
 				</div>
 			</section>
@@ -187,7 +194,9 @@
 				<div class="flex gap-4">
 					<!-- Timeline column -->
 					<div class="flex flex-col items-center">
-						<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+						<div
+							class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white"
+						>
 							<Briefcase class="h-5 w-5" />
 						</div>
 						{#if index < sortedWorkHistory.length - 1}
@@ -205,8 +214,10 @@
 							class:border-base-300={!highlighted}
 						>
 							{#if highlighted}
-								<span class="absolute -top-2.5 right-3 rounded bg-primary px-2 py-0.5 text-xs font-medium text-white">
-									Based on Search
+								<span
+									class="absolute -top-2.5 right-3 rounded bg-primary px-2 py-0.5 text-xs font-medium text-white"
+								>
+									Recommended
 								</span>
 							{/if}
 							<div class="card-body p-5">
@@ -233,16 +244,14 @@
 								<p class="mt-2 text-sm text-base-content/80">{work.description}</p>
 								<div class="mt-3 flex flex-wrap gap-1.5">
 									{#each work.technologies as tech}
-										{@const techHighlighted = selectedTags.some(
-											(tag) => tag.category === 'technologies' && tag.value.toLowerCase() === tech.toLowerCase()
-										)}
+										{@const techHighlighted = isTechHighlighted(tech)}
 										<span
 											class="badge px-2.5 py-2"
 											class:badge-outline={!techHighlighted}
 											class:bg-primary={techHighlighted}
 											class:text-white={techHighlighted}
-											class:border-primary={techHighlighted}
-										>{tech}</span>
+											class:border-primary={techHighlighted}>{tech}</span
+										>
 									{/each}
 								</div>
 							</div>
