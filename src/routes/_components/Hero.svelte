@@ -40,8 +40,8 @@
 				<Button
 					variant="secondary"
 					onclick={() => {
-						goto('/team');
-					}}>Our Projects</Button
+						goto('/contact');
+					}}>Get in Touch</Button
 				>
 			</div>
 		</div>

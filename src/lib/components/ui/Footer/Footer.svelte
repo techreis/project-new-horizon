@@ -11,12 +11,6 @@
 				Start your digital transformation journey today.
 			</h4>
 			<div class="flex flex-col gap-y-3">
-				<p>
-					<span class="font-semibold">Call:</span> (+81)00 0000 0000
-				</p>
-				<p>
-					<span class="font-semibold">Email:</span> enquiries@techreis.co.jp
-				</p>
 				<p class="font-semibold">
 					502 The Prestige Gran, 17-7 Hikawa-cho, Chuo-ku,<br />
 					Sagamihara-shi, Kanagawa, Japan

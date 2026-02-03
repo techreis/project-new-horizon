@@ -6,7 +6,8 @@
 
 	let { data, children } = $props();
 
-	
+	const comingSoon = true; // Set to false to enable the team page
+
 	let selectedTags = $state<SearchTag[]>([]);
 	let textQuery = $state('');
 
@@ -76,6 +77,11 @@
 	);
 </script>
 
+{#if comingSoon}
+	<div class="flex min-h-[800px] items-center justify-center">
+		<p class="text-xl font-semibold">Coming Soon</p>
+	</div>
+{:else}
 <main class="mx-auto flex min-h-[800px] max-w-[1400px] gap-x-8 overflow-visible p-6">
 	<section class="flex max-h-[800px] w-[380px] min-w-[380px] flex-col gap-y-5">
 		<div class="card bg-base-200/50 p-4">
@@ -110,3 +116,4 @@
 		{@render children()}
 	</section>
 </main>
+{/if}
