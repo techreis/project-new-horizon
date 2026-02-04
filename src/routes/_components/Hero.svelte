@@ -31,12 +31,12 @@
 				/>
 			</p>
 			<div class="flex justify-center gap-[25px] lg:justify-start">
-				<Button
+				<!-- <Button
 					variant="secondary"
 					onclick={() => {
 						goto('/team');
 					}}>Meet Our Team</Button
-				>
+				> -->
 				<Button
 					variant="secondary"
 					onclick={() => {

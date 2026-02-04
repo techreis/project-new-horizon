@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Menu, X, ChevronDown } from 'lucide-svelte/icons';
+	import { ChevronDown, Menu, X } from 'lucide-svelte/icons';
 	import { slide } from 'svelte/transition';
 
 	let isMenuOpen = $state(false);
@@ -9,7 +9,7 @@
 	const navItems = [
 		{ href: '/', label: 'Home' },
 		{ href: '/company', label: 'Tech Reis' },
-		{ href: '/team', label: 'Our Team' },
+		// { href: '/team', label: 'Our Team' },
 		{
 			href: '#',
 			label: 'Blog',
