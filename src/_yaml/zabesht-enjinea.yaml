@@ -1,0 +1,44 @@
+basic:
+  name: 'Zabesht Enjinea'
+  slug: 'zabesht-enjinea'
+  role: 'AI Solutions Architect'
+  top_skills:
+    - 'Machine Learning'
+    - 'Python'
+
+profile:
+  introduction: |
+    "Zabesht is an AI solutions architect with a deep understanding of machine learning algorithms and scalable AI models. He is passionate about delivering innovative solutions for complex business problems."
+
+skills:
+  spoken_languages:
+    - 'English (Native)'
+    - 'Hindi (Fluent)'
+  programming_languages:
+    - 'Python'
+    - 'R'
+    - 'C++'
+  frameworks:
+    - 'TensorFlow'
+    - 'PyTorch'
+  databases:
+    - 'PostgreSQL'
+    - 'MongoDB'
+  cloud_platforms:
+    - 'AWS'
+    - 'Google Cloud'
+  tools:
+    - 'Jupyter Notebook'
+    - 'VS Code'
+
+work_history:
+  - name: 'InnoAI Labs'
+    role: 'AI Engineer'
+    team_size: 5
+    description: 'Developed predictive models to optimize supply chain operations.'
+    start_date: '2020-02-01'
+    end_date: '2024-08-31'
+    technologies:
+      - 'Python'
+      - 'TensorFlow'
+      - 'PostgreSQL'

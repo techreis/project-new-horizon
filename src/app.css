@@ -3,27 +3,98 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-[3.5rem] md:text-7xl font-bold;
-  }
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
 
-  h2 {
-    @apply text-[2.5rem] md:text-[3.5rem] font-bold;
-  }
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
 
-  h3 {
-    @apply text-[1.75rem] md:text-[2rem] font-medium;
-  }
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
 
-  h4 {
-    @apply text-[1.5rem] md:text-2xl font-light;
-  }
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
 
-  h5 {
-    @apply text-[1.25rem] md:text-xl font-light;
-  }
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
 
-  p {
-    @apply text-base md:text-base font-normal;
-  }
+		--primary: 231 63% 17%;
+		--primary-foreground: 210 40% 98%;
+
+		--secondary: 238 100% 61%;
+		--secondary-foreground: 210 40% 98%;
+
+		--accent: 191 100% 50%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+
+		--destructive: 0 72.2% 50.6%;
+		--destructive-foreground: 210 40% 98%;
+
+		--ring: 222.2 84% 4.9%;
+
+		--radius: 0.5rem;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+	}
+
+	font-face {
+		font-family: 'Lato';
+		font-weight: 300;
+		src: url(/fonts/Lato-Light.tff) format('tff');
+	}
+
+	font-face {
+		font-family: 'Lato';
+		font-weight: 400;
+		src: url(/fonts/Lato-Regular.tff) format('tff');
+	}
+
+	font-face {
+		font-family: 'Lato';
+		font-weight: 700;
+		src: url(/fonts/Lato-Bold.tff) format('tff');
+	}
+
+	h1 {
+		@apply text-[3.5rem] font-bold !leading-[120%] lg:text-7xl;
+	}
+
+	h2 {
+		@apply text-[2.5rem] font-medium !leading-[120%] text-primary lg:text-[3.5rem];
+	}
+
+	h3 {
+		@apply text-[1.75rem] font-normal !leading-[120%] text-primary lg:text-[2rem];
+	}
+
+	h4 {
+		@apply text-[1.5rem] font-light !leading-[120%] lg:text-2xl;
+	}
+
+	h5 {
+		@apply text-[1.25rem] font-light !leading-[120%] lg:text-xl;
+	}
+
+	p {
+		@apply text-base font-normal !leading-[120%] lg:text-base;
+	}
+}
+
+@layer utilities {
+	.tech-glow {
+		filter: drop-shadow(0 4px 66.6px rgba(0, 209, 255, 0.34));
+	}
+	.tech-glow-strong {
+		filter: drop-shadow(0 4px 66.6px rgba(0, 209, 255, 1))
+			drop-shadow(0 4px 66.6px rgba(0, 209, 255, 1));
+	}
 }
